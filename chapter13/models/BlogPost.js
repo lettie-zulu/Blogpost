@@ -24,10 +24,10 @@ const BlogPostSchema = new Schema({
 const BlogPost = mongoose.model('BlogPost', BlogPostSchema);
 module.exports = BlogPost;
 
-module.exports = async (req,res)=>{ 
-    const blogpost = await BlogPost.findById(req.params.id).populate('User');
-    console.log(blogpost)
-    res.render('post',{
-    blogpost
-    }); 
-   }
+// module.exports = async (req,res)=>{ 
+//     const blogpost = await BlogPost.findById(req.params.id).populate('User');
+//     console.log(blogpost)
+//     res.render('post',{
+//     blogpost
+//     }); 
+//    }

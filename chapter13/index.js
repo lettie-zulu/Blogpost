@@ -44,7 +44,7 @@ app.use('*', (req, res, next) =>{
 
 const BlogPost = require('./models/BlogPost.js');
 
-mongoose.connect('mongodb://127.0.0.1/my_database',
+mongoose.connect('mongodb://127.0.0.1:27017/my_database',
     { useNewUrlParser: true });
 
 app.get('/posts/new',authMiddleware, newPostController);
